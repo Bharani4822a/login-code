@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday and Phone Verification</title>
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body>
+    <cript class="verification-container">
+        <h2>Birthday and Phone Verification</h2>
+        <form id="verificationForm" onsubmit="verifyData(event)">
+            <div class="input-group">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+                <small>Enter a 10-digit phone number (numeric only).</small>
+            </div>
+            <div style="display: flex; justify-content: space-between;align-items: center;">
+                <button onclick="goToPage2()">verify</button>
+                <button onclick={history.go(-1)}><b>Back</b></button>
+            </div>
+        </form>
+        <script>
+            function goToPage2() {
+                // Set the href property to the URL of the second page
+                location.href = '/verification.html';
+            }
+         </script> 
+        
+</body>
+
+</html>
